@@ -21,14 +21,10 @@ function startGame(){
     }
 }
 
-// Laptop keyboard support
 document.addEventListener("keypress", startGame);
 
-// Mobile touch support
-document.addEventListener("touchstart", startGame);
+document.body.addEventListener("touchstart", startGame, { once: true });
 
-// Mobile click support
-document.addEventListener("click", startGame);
 
 
 function levelup(){
