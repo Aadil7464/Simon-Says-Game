@@ -9,16 +9,25 @@ let level=0;              // not start then level is 0
 
 let h2=document.querySelector("h2");
 
-document.querySelector("#start-btn").addEventListener("click", function () {   //jese hi keyboard se koi key press ho game start ho jay
-    // console.log("game is started")              // sirf check krne k liye ki event trigger hua ya nhi
-    if(started==false){                            // agr game start nhi hua to value false rhegi
-        console.log("game is started");            // sirf jab value false ho tab hi msg aay game is started
-        started=true;                             // valeu update ho jay
-     
-        levelup();                                // level up ko call kro jese hi game start ho
+let startBtn = document.querySelector("#start-btn");
 
+function startGame(){
+
+    if(started == false){
+
+        console.log("game is started");
+
+        started = true;
+
+        levelup();
     }
-})
+}
+
+startBtn.addEventListener("click", startGame);
+
+startBtn.addEventListener("touchstart", startGame);
+
+
 
 function levelup(){
     userSeq=[];
@@ -92,7 +101,7 @@ for(btn of allbtns){
 function reset(){
     started=false;
     gameSeq=[];
-    userSeql=[];
+    userSeq=[];
     level=0;
 }
 
