@@ -9,7 +9,7 @@ let level=0;              // not start then level is 0
 
 let h2=document.querySelector("h2");
 
-document.addEventListener("keypress",function(){   //jese hi keyboard se koi key press ho game start ho jay
+document.querySelector("#start-btn").addEventListener("click", function () {   //jese hi keyboard se koi key press ho game start ho jay
     // console.log("game is started")              // sirf check krne k liye ki event trigger hua ya nhi
     if(started==false){                            // agr game start nhi hua to value false rhegi
         console.log("game is started");            // sirf jab value false ho tab hi msg aay game is started

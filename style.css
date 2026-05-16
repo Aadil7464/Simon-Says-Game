@@ -11,7 +11,7 @@ body{
 }
 .green{
     background-color: #13c06f;
-}
+}   
 .yellow{
     background-color: #f99b45;
 }
@@ -24,6 +24,14 @@ body{
 
 .flash{
     background-color: white;
+}
+
+#start-btn{
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
 }
 
 @media screen and (max-width: 520px) {
