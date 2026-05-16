@@ -9,8 +9,6 @@ let level=0;              // not start then level is 0
 
 let h2=document.querySelector("h2");
 
-let startBtn = document.querySelector("#start-btn");
-
 function startGame(){
 
     if(started == false){
@@ -23,10 +21,14 @@ function startGame(){
     }
 }
 
-startBtn.addEventListener("click", startGame);
+// Laptop keyboard support
+document.addEventListener("keypress", startGame);
 
-startBtn.addEventListener("touchstart", startGame);
+// Mobile touch support
+document.addEventListener("touchstart", startGame);
 
+// Mobile click support
+document.addEventListener("click", startGame);
 
 
 function levelup(){
@@ -68,7 +70,7 @@ function checkAns(idx){
     }else{
         //h2.innerText=`Game Over! Your score was<b>${level}</b> <br> Press any key to start`;// ye wrror show krega                                              kiyuki innneText me hum tag nhi de skte h
 
-        h2.innerHTML=`Game Over! Your score was<b>${level}</b> <br> Press any key to start`;
+        h2.innerHTML=`Game Over! Your score was<b>${level}</b> <br> "Press any key or tap anywhere to start"`;
         //document.querySelector("body").Style.backgroundColor="red";
         document.querySelector("body").style.background="red";
         setTimeout(function(){
